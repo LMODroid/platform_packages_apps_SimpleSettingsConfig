@@ -73,14 +73,17 @@ public class BootReceiver extends BroadcastReceiver {
 
             switch (namespace) {
                 case "global":
+                case "lineage_global":
                     Settings.Global.putString(context.getContentResolver(), key, value);
                     break;
 
                 case "secure":
+                case "lineage_secure":
                     Settings.Secure.putString(context.getContentResolver(), key, value);
                     break;
 
                 case "system":
+                case "lineage_system":
                     Settings.System.putString(context.getContentResolver(), key, value);
                     break;
 
